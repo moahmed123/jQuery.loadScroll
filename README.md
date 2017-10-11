@@ -13,10 +13,10 @@ Reference the `loadScroll()` method and use the `data-src` attribute for all dyn
 **HTML**
 ```html
 <!-- Load on Scroll -->
-<img data-src="a.png" src="#" alt="">
-<img data-src="b.png" src="#" alt="">
-<img data-src="c.png" src="#" alt="">
-<img data-src="d.png" src="placeholder.png" alt="">  
+<img id='1' data-src="a.png" src="#" alt="">
+<img id='2' data-src="b.png" src="#" alt="">
+<img id='3' data-src="c.png" src="#" alt="">
+<img id='4' data-src="d.png" src="placeholder.png" alt="">  
 ```
 
 **jQuery**
@@ -24,10 +24,11 @@ Reference the `loadScroll()` method and use the `data-src` attribute for all dyn
 $(function() {  
 
     // Default
-    $('img').loadScroll();
+    $('img').loadScroll(0,2);
     
     // Custom fadeIn Duration
-    $('img').loadScroll(500);
+    // 2 It's Number Of Image Load Before Scroll 
+    $('img').loadScroll(500,2);
     
 });
 ```  
